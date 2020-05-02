@@ -1,0 +1,45 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# output currentfile name location
+currentfile=`basename "$0"`
+echo "this is coming from $(pwd)/$currentfile"
+
+export PATH=${PATH}:${HOME}/dotfiles/scripts/aliases.sh
+export PATH=${PATH}:${HOME}/dotfiles/bin/
+export PATH=${PATH}:${HOME}/dotfiles/.ssh/
+export PATH=${PATH}:${HOME}/dotfiles/editors/vscode
+
+# broot
+source /Users/mandalarian/Library/Preferences/org.dystroy.broot/launcher/bash/br
+
+
+export PATH=${PATH}:${HOME}/.local/bin
+export PATH=${PATH}:"/usr/local/opt/llvm/bin"
+export PATH=${PATH}:${HOME}/.basher/bin
+export PATH=${PATH}:/usr/local/bin
+
+# https://github.com/jluningp/smlformat
+# echo "PATH=\"\$PATH:SMLFORMAT_DIR\"; export PATH" >> ~/.bashrc
+export PATH=${PATH}:${HOME}/smlformat:$PATH
+
+# basher
+eval `$(basher init - zsh)`
+
+# opam configuration
+test -r ${HOME}/.opam/opam-init/init.zsh && . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+eval `opam config env`
+
+# fnm
+eval $(fnm env --multi)
+
+
