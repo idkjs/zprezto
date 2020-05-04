@@ -1,7 +1,0 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
-[submodule "basher"]
-	path = basher
-	url = https://github.com/basherpm/basher.git
