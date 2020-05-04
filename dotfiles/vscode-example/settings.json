@@ -1,0 +1,57 @@
+{
+  "debug.allowBreakpointsEverywhere": true,
+  "editor.accessibilitySupport": "off",
+  "editor.codeLens": true,
+  "editor.colorDecorators": true,
+  "editor.dragAndDrop": true,
+  "editor.folding": false,
+  "editor.fontLigatures": true,
+  "editor.fontSize": 17,
+  "editor.glyphMargin": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "selection",
+  "editor.padding.top": 15,
+  "explorer.compactFolders": true,
+  "editor.rulers": [
+    80
+  ],
+  "editor.scrollBeyondLastLine": false,
+  "editor.cursorSurroundingLines": 3,
+  "editor.useTabStops": true,
+  "editor.formatOnPaste": false,
+  "editor.tabCompletion": "on",
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 80,
+  "explorer.confirmDelete": false,
+  "explorer.decorations.badges": false,
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    ".babelrc": "jsonc",
+    ".eslintrc": "jsonc"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.cache": true,
+    "**/.idea": true
+  },
+  "git.autofetch": false,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "terminal.integrated.enableBell": true,
+  "window.clickThroughInactive": false,
+  "window.newWindowDimensions": "maximized",
+  "window.zoomLevel": 0,
+  "workbench.colorCustomizations": {
+    "gitDecoration.modifiedResourceForeground": "#d4cb68",
+    "activityBar.activeBorder": "#e5b358",
+    "editorSuggestWidget.highlightForeground": "#e5b358",
+    "editorSuggestWidget.selectedBackground": "#1c2a42",
+    "activityBar.foreground": "#797d7b",
+    "tab.inactiveForeground": "#676b6a",
+    "sideBar.foreground": "#565958",
+  },
+  "git.autorefresh": true,
+  "git.decorations.enabled": true,
+  "breadcrumbs.enabled": false
+}

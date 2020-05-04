@@ -1,0 +1,91 @@
+{
+    "explorer.confirmDragAndDrop": false,
+    "git.enableSmartCommit": true,
+    "explorer.confirmDelete": false,
+    "breadcrumbs.enabled": true,
+    "workbench.startupEditor": "welcomePage",
+    "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.definitionLinkOpensInPeek": true,
+    "debug.allowBreakpointsEverywhere": true,
+    "editor.accessibilitySupport": "off",
+    "editor.codeLens": true,
+    "editor.colorDecorators": true,
+    "editor.dragAndDrop": true,
+    "editor.folding": false,
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.glyphMargin": true,
+    "editor.renderWhitespace": "selection",
+    "editor.padding.top": 15,
+    "explorer.compactFolders": true,
+    "editor.rulers": [80],
+    "editor.cursorSurroundingLines": 3,
+    "editor.useTabStops": true,
+    "editor.tabCompletion": "on",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "explorer.decorations.badges": false,
+    "extensions.ignoreRecommendations": true,
+    "files.associations": {
+      ".babelrc": "jsonc",
+      ".eslintrc": "jsonc"
+    },
+    "files.exclude": {
+      "**/.DS_Store": true,
+      "**/.cache": true,
+      "**/.idea": true
+    },
+    "git.autofetch": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.enableBell": true,
+    "window.clickThroughInactive": false,
+    "window.newWindowDimensions": "maximized",
+    "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {
+      "gitDecoration.modifiedResourceForeground": "#d4cb68",
+      "activityBar.activeBorder": "#e5b358",
+      "editorSuggestWidget.highlightForeground": "#e5b358",
+      "editorSuggestWidget.selectedBackground": "#1c2a42",
+      "activityBar.foreground": "#797d7b",
+      "tab.inactiveForeground": "#676b6a",
+      "sideBar.foreground": "#565958"
+    },
+    "git.autorefresh": true,
+    "git.decorations.enabled": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "code-runner.executorMap": {
+      "sml": "cd $dir && cat $fileName | /usr/local/smlnj/bin/sml"
+    },
+    "code-runner.executorMapByFileExtension": {
+      ".sml": "sml //Nologo"
+    },
+    "[sml]": {
+      "editor.defaultFormatter": "stonebuddha.vscode-better-sml"
+    },
+    "editor.formatOnType": true,
+    "files.autoSave": "afterDelay",
+    "[shellscript]": {
+    "editor.codeLens": true,
+    "editor.trimAutoWhitespace": true
+    },
+    "reason_language_server.per_value_codelens": true,
+    "reason_language_server.dependencies_codelens": true,
+    "reason_language_server.refmt": "/usr/local/bin/refmt",
+    "reason_language_server.reloadOnChange": true,
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "remimarsal.prettier-now"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "remimarsal.prettier-now"
+    },
+    "[reason]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "jaredly.reason-vscode"
+      },
+  }
+  

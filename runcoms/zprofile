@@ -17,7 +17,7 @@ fi
 # Editors
 #
 
-export EDITOR='oni2'
+export EDITOR='code'
 export VISUAL='oni2'
 export PAGER='less'
 
@@ -73,3 +73,6 @@ export PATH=/usr/local/smlnj/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/Users/mandalarian/.local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
+
+
+eval $(fnm env --multi)

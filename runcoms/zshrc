@@ -12,7 +12,7 @@ fi
 # output currentfile name location
 currentfile=`basename "$0"`
 echo "this is coming from $(pwd)/$currentfile"
-
+source ${HOME}/dotfiles/scripts/aliases.sh
 export PATH=${PATH}:${HOME}/dotfiles/scripts/aliases.sh
 export PATH=${PATH}:${HOME}/dotfiles/bin/
 export PATH=${PATH}:${HOME}/dotfiles/.ssh/
@@ -24,15 +24,14 @@ source /Users/mandalarian/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 export PATH=${PATH}:${HOME}/.local/bin
 export PATH=${PATH}:"/usr/local/opt/llvm/bin"
-export PATH=${PATH}:${HOME}/.basher/bin
+# basher
+export PATH="$HOME/.basher/bin:$PATH"
+eval "$(basher init - zsh)"
 export PATH=${PATH}:/usr/local/bin
 
 # https://github.com/jluningp/smlformat
 # echo "PATH=\"\$PATH:SMLFORMAT_DIR\"; export PATH" >> ~/.bashrc
 export PATH=${PATH}:${HOME}/smlformat:$PATH
-
-# basher
-eval `$(basher init - zsh)`
 
 # opam configuration
 test -r ${HOME}/.opam/opam-init/init.zsh && . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -42,4 +41,7 @@ eval `opam config env`
 # fnm
 eval $(fnm env --multi)
 
-
+# https://github.com/git-friendly/git-friendly#zsh-shell-completion
+fpath=($(brew --prefix)/share/zsh/functions $fpath)
+autoload -Uz _git && _git
+compdef __git_branch_names branch
