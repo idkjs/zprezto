@@ -12,18 +12,23 @@ fi
 # output currentfile name location
 currentfile=`basename "$0"`
 echo "this is coming from $(pwd)/$currentfile"
-source ${HOME}/dotfiles/scripts/aliases.sh
+source $HOME/dotfiles/scripts/aliases.sh
+export PATH=${PATH}:${HOME}/dotfiles/schellcheck/.shellcheckrc
 export PATH=${PATH}:${HOME}/dotfiles/scripts/aliases.sh
 export PATH=${PATH}:${HOME}/dotfiles/bin/
 export PATH=${PATH}:${HOME}/dotfiles/.ssh/
 export PATH=${PATH}:${HOME}/dotfiles/editors/vscode
 
+# https://formulae.brew.sh/formula/boost#default
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 # broot
-source /Users/mandalarian/Library/Preferences/org.dystroy.broot/launcher/bash/br
+source ${HOME}/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 
 export PATH=${PATH}:${HOME}/.local/bin
 export PATH=${PATH}:"/usr/local/opt/llvm/bin"
+
 # basher
 export PATH="$HOME/.basher/bin:$PATH"
 eval "$(basher init - zsh)"
@@ -36,12 +41,13 @@ export PATH=${PATH}:${HOME}/smlformat:$PATH
 # opam configuration
 test -r ${HOME}/.opam/opam-init/init.zsh && . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-eval `opam config env`
-
+eval $(opam config env)
+echo "current ocaml switch: $(opam switch show)"
 # fnm
-eval $(fnm env --multi)
+eval "$(fnm env --multi)"
 
 # https://github.com/git-friendly/git-friendly#zsh-shell-completion
-fpath=($(brew --prefix)/share/zsh/functions $fpath)
+fpath=("$(brew --prefix)/share/zsh/functions" "$fpath")
 autoload -Uz _git && _git
-compdef __git_branch_names branch
+compdef __git_branch_names branchexport PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"

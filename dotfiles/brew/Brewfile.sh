@@ -52,8 +52,6 @@ brew "lazygit"
 # https://github.com/mas-cli/mas
 brew "mas"
 
-# https://github.com/defunkt/gist
-brew "gist"
 # https://github.com/dylanaraps/neofetch
 brew "neofetch"
 brew "neovim"
@@ -97,14 +95,14 @@ brew "wget"
 brew "wifi-password"
 brew "yarn", args: ["ignore-dependencies"]
 brew "yarn-completion"
-brew "httpie"  
+brew "httpie"
 brew "youtube-dl"
 brew "z"
 brew "zsh"
 brew "zsh-completions"
 
 cask "discord"
-cask "iterm2" 
+cask "iterm2"
 cask "font-iosevka-nerd-font"
 
 # MacOS Automation Tool https://www.hammerspoon.org/
